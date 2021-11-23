@@ -38,9 +38,9 @@ const RepoCommits = () => {
     const data = new Date(date)
     const month = data.toLocaleString("en-GB", { month: "short" })
     return (
-      <p>
+      <span>
         commited on {data.getDate()} {month}
-      </p>
+      </span>
     )
   }
 
@@ -139,6 +139,11 @@ const Flex = styled.div`
         color: rgb(88, 166, 255);
       }
     }
+  }
+
+  span {
+    font-size: 0.8rem;
+    font-weight: 300;
   }
 
   @media (max-width: 620px) {
