@@ -25,6 +25,7 @@ const User: React.FC = () => {
       .catch((err) => {
         if (err.response) {
           setUserData({ error: "User not found" })
+          return
         }
 
         setUserData({ error: "Error while fetching data" })
